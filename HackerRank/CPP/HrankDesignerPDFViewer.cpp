@@ -13,20 +13,8 @@ inline void printInt(int a);
 inline lli readLong();
 inline void printLong(lli a);
 int main(){
-    int t=readInt();
-    while (t--) {
-        lli fuck[3];
-        lli kk,b=-1;
-        fuck[0]=readLong();fuck[1]=readLong();fuck[2]=readLong();kk=readLong();
-        sort(fuck,fuck+3);
-        if(kk<=fuck[1]+1 && kk>fuck[0]+1){
-            printLong(2*kk-1+fuck[0]);
-        }else if(kk>fuck[1]+1){
-            printLong(fuck[0]+fuck[1]+kk);
-        }else if(kk<=fuck[0]+1){
-            printLong(kk*3-2);
-        }
-    }
+    int a[26];string str;for(int i=0;i<26;i++)a[i]=readInt();cin>>str;int mx=-1;
+    for(int i=0;i<str.length();i++) if(a[str[i]-'a']>mx)mx=a[str[i]-'a'];printInt(mx*str.length());
 }
 
 
